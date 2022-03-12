@@ -2,10 +2,12 @@
   "name": "hackideas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kishanpp.github.io/hackideas",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d build",
   },
   "dependencies": {
     "@popperjs/core": "^2.11.2",
