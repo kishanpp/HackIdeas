@@ -40,6 +40,7 @@
             </div>              
             <button type="submit" class="btn btn-primary" @click.prevent="addChallenge">Add Challenge</button>
         </form>
+        <!-- <router-link to="/" >return to Homepage</router-link> -->
       
         <div class="alert alert-warning alert-dismissible fade show" role="alert" v-if="msg.length">
             {{this.msg}}
@@ -112,6 +113,7 @@ export default{
             this.$nextTick(() => { 
                 this.v$.$reset()
                 this.$emit("updateTable");
+                this.$router.push('/');
             })
         },
     },

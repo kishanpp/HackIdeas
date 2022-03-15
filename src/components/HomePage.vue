@@ -18,8 +18,8 @@
                 </li>
             </ul>
         </nav>
-
-        <Challenge @updateTable="updateTable" />
+        <router-link to="/addChallenge" >Add Challenge</router-link>
+        <!-- <Challenge @updateTable="updateTable" /> -->
         <h3 class="p-3 text-center">List of Challenges</h3>
         <table class="table table-striped table-bordered">
             <thead>
@@ -41,7 +41,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="challenge in sortedChallenges" :key="challenge.challengeId">
+                <tr v-for="(challenge) in sortedChallenges" :key="challenge.challengeId">
                     <td align="center">{{challenge.challengeId}}</td>
                     <td>{{challenge.title}}</td>
                     <td>{{challenge.description}}</td>
@@ -64,14 +64,14 @@
 </template>
 
 <script>
-import Challenge from '/src/components/ChallengeForm.vue'
+// import Challenge from '/src/components/ChallengeForm.vue'
 import UpdateChallenge from '/src/components/UpdateChallenge.vue'
 import api from '/src/api/challenge'
 import auth from '@/authentication/auth.js'
 
 export default {
     components: {
-        Challenge,
+        // Challenge,
         UpdateChallenge
     },
     data: function (){
@@ -82,6 +82,7 @@ export default {
                 isAsc: false
             },
             eid: '',
+            
         }
     },
     methods: {
